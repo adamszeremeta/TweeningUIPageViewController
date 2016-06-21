@@ -8,16 +8,10 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
-  s.author       = 'Adam Szeremeta'
-
-  s.platform     = :ios, '8.0'
-  s.ios.deployment_target = '8.0'
+  s.author       = { 'Adam Szeremeta' => 'adamszeremeta@gmail.com' }
 
   s.source       = { :git => 'https://github.com/adamszeremeta/TweeningUIPageViewController.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '8.0'
   s.source_files = 'TweeningUIPageViewController/*.swift'
-
-  s.framework    = 'UIKit'
-
-  s.requires_arc = true
 
 end
