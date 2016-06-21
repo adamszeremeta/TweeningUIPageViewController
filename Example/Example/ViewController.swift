@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
 
     private func addUIPageViewControllerToViewHierarchy() {
         
-        self.pageViewController = TweeningUIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        self.pageViewController = TweeningPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         self.pageViewController.dataSource = self
         self.pageViewController.tweeningDelegate = self
         
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
     
     // MARK: TweeningUIPageViewControllerDelegate
     
-    func tweeningUIPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         return nil
     }
     
-    func tweeningUIPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             
@@ -97,7 +97,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         return nil
     }
     
-    func tweeningUIPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             

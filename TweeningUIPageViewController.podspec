@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
   s.author       = "Adam Szeremeta"
 
   s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
 
-  s.source       = { :git => "https://github.com/Rst-It/ios-swift-utils.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/adamszeremeta/TweeningUIPageViewController.git", :tag => s.version.to_s }
   s.source_files = "TweeningUIPageViewController/*.swift"
   s.module_name  = "TweeningUIPageViewController"
   s.requires_arc = true

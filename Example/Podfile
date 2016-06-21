@@ -7,6 +7,6 @@ use_frameworks!
 
 target 'Example' do
 
-    pod 'TweeningUIPageViewController', :path => '../'
+    pod 'TweeningUIPageViewController', :git => 'https://github.com/adamszeremeta/TweeningUIPageViewController.git'
 
 end
