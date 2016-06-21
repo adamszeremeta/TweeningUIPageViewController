@@ -2,20 +2,15 @@ PODS:
   - TweeningUIPageViewController (1.0.0)
 
 DEPENDENCIES:
-  - TweeningUIPageViewController (from `https://github.com/adamszeremeta/TweeningUIPageViewController.git`)
+  - TweeningUIPageViewController (from `../`)
 
 EXTERNAL SOURCES:
   TweeningUIPageViewController:
-    :git: https://github.com/adamszeremeta/TweeningUIPageViewController.git
-
-CHECKOUT OPTIONS:
-  TweeningUIPageViewController:
-    :commit: 4e9a281298deff5c46f53be81ec0e1518c9a753b
-    :git: https://github.com/adamszeremeta/TweeningUIPageViewController.git
+    :path: ../
 
 SPEC CHECKSUMS:
-  TweeningUIPageViewController: d1447b46f4697db763dfd874ef7451e270d107e5
+  TweeningUIPageViewController: 610e2e1fe15f850b507dbc928e4545977827947b
 
-PODFILE CHECKSUM: 459e659edb93d2a8e74e22f09ad544e1219f77bb
+PODFILE CHECKSUM: cbb589d470cd0c1d086a5bb5f153d6c4baba6a2c
 
 COCOAPODS: 1.0.0

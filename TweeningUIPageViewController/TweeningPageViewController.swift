@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc protocol TweeningPageViewControllerDelegate: class {
+@objc public protocol TweeningPageViewControllerDelegate: class {
     
     func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor?
     func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor?
@@ -18,17 +18,17 @@ import UIKit
     optional func tweeningPageViewController(tweeningController:TweeningPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) -> Void
 }
 
-class TweeningPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
+public class TweeningPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
     // MARK: Properties
     
     private (set) weak var currentController:UIViewController?
     
-    weak var tweeningDelegate:TweeningPageViewControllerDelegate?
+    public weak var tweeningDelegate:TweeningPageViewControllerDelegate?
     
     // MARK: Life cycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
@@ -36,7 +36,7 @@ class TweeningPageViewController : UIPageViewController, UIPageViewControllerDel
         registerForScrollViewDelegate()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         //set current controller
@@ -51,7 +51,7 @@ class TweeningPageViewController : UIPageViewController, UIPageViewControllerDel
     
     // MARK: PageViewControllerDelegate
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if completed {
             
@@ -74,7 +74,7 @@ class TweeningPageViewController : UIPageViewController, UIPageViewControllerDel
         }
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    public func scrollViewDidScroll(scrollView: UIScrollView) {
         
         //color tweening
         self.handleScrollOffsetForColorTweening(scrollView.contentOffset.x)

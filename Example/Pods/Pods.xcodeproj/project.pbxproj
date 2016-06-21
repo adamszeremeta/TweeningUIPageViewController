@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0529F4A4082E0AD22DC1BBB5E4FEECD4 /* TweeningUIPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7EBAAE6A572DD49F7D26CD56303821 /* TweeningUIPageViewController-dummy.m */; };
+		0CB35A050C9C7CD5D97A68822A414445 /* TweeningPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719AAA66F91EA3B29B409303554FFB5 /* TweeningPageViewController.swift */; };
 		1B74685DA6B5544877CF1D70D3B81849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		329F2874625D1CCD9E0F3B65491C5D49 /* TweeningUIPageViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D24D74D1CA7F58A49CDEA97813369A /* TweeningUIPageViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		329F2874625D1CCD9E0F3B65491C5D49 /* TweeningUIPageViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92888B89C82A8F343E07CFC470B1D56D /* TweeningUIPageViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		896FF8E0E10A5F1350FF9D2366C503A4 /* UIColor+ColorTweening.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B4644BBA266748D7B33A3398F4EA /* UIColor+ColorTweening.swift */; };
 		910AE5FBA255BFEBE1648FE4EC58C407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		BBBC7B235FFE4B0E86593783B9C883E8 /* UIColor+ColorTweening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14E5178D003E71A92F771E78A097A5 /* UIColor+ColorTweening.swift */; };
 		C690510E42CEB88677F487616B6C5263 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
 		C7A3B34B05DDA7E6E10C5861D7CAA5FC /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E94D8AE52795E5CD640AFF1E78062A2E /* TweeningPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6B3E449800666C63813E0AE6A039F /* TweeningPageViewController.swift */; };
+		CF0F99C775689438EA571E71327F83DE /* TweeningUIPageViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 355CCB0C42819012B0475834155CECED /* TweeningUIPageViewController-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,27 +29,27 @@
 
 /* Begin PBXFileReference section */
 		01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		098B0ED9B535CB8C2EE501A4E33B258A /* TweeningUIPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweeningUIPageViewController.xcconfig; sourceTree = "<group>"; };
 		110DC45A3F58DA67323EF5892E84A61E /* TweeningUIPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeningUIPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2CBC7E541B7D5224114265AAE742D8F4 /* TweeningUIPageViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweeningUIPageViewController.xcconfig; sourceTree = "<group>"; };
-		40E6B3E449800666C63813E0AE6A039F /* TweeningPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweeningPageViewController.swift; path = TweeningUIPageViewController/TweeningPageViewController.swift; sourceTree = "<group>"; };
+		1BC998AE3108E52AF80B8BD509A0DEFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355CCB0C42819012B0475834155CECED /* TweeningUIPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweeningUIPageViewController-dummy.m"; sourceTree = "<group>"; };
+		4893C41197A2AFD3CCA7F137CC76E19E /* TweeningUIPageViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TweeningUIPageViewController.modulemap; sourceTree = "<group>"; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7B14E5178D003E71A92F771E78A097A5 /* UIColor+ColorTweening.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorTweening.swift"; path = "TweeningUIPageViewController/UIColor+ColorTweening.swift"; sourceTree = "<group>"; };
-		8C5FFA9651F3F76F9D9F0C56B400FCDE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8719AAA66F91EA3B29B409303554FFB5 /* TweeningPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TweeningPageViewController.swift; sourceTree = "<group>"; };
 		90979DBD8921BF00019DB9C828F2D575 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92888B89C82A8F343E07CFC470B1D56D /* TweeningUIPageViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeningUIPageViewController-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA7EBAAE6A572DD49F7D26CD56303821 /* TweeningUIPageViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweeningUIPageViewController-dummy.m"; sourceTree = "<group>"; };
-		C5D24D74D1CA7F58A49CDEA97813369A /* TweeningUIPageViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeningUIPageViewController-umbrella.h"; sourceTree = "<group>"; };
 		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DE769FAE284941B83B6A46DE0E3D211C /* TweeningUIPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeningUIPageViewController-prefix.pch"; sourceTree = "<group>"; };
+		CFC0D2F628EAFEE0AADC80F5B0D2E075 /* TweeningUIPageViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeningUIPageViewController-prefix.pch"; sourceTree = "<group>"; };
 		E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		EF86051B3FB88A2CDC32A04197F5FFE1 /* TweeningUIPageViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TweeningUIPageViewController.modulemap; sourceTree = "<group>"; };
 		EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD05B4644BBA266748D7B33A3398F4EA /* UIColor+ColorTweening.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorTweening.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +89,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		63938094D1AFFC3C06E1D48A47CF5825 /* Pods */ = {
+		44CE1A5D2739D4D431AADC494CC47BD2 /* TweeningUIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71E42B49CADBFA71E64D27E459B295ED /* TweeningUIPageViewController */,
+				F5E17FF71EE4DD8D86C7D10D5DA6C43F /* Support Files */,
+				9DF88E010C4E1918F4E59E0A125535C1 /* TweeningUIPageViewController */,
 			);
-			name = Pods;
+			name = TweeningUIPageViewController;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
@@ -105,25 +107,32 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		71E42B49CADBFA71E64D27E459B295ED /* TweeningUIPageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				40E6B3E449800666C63813E0AE6A039F /* TweeningPageViewController.swift */,
-				7B14E5178D003E71A92F771E78A097A5 /* UIColor+ColorTweening.swift */,
-				F29FB82EA9E1739B1D49A5C3C2B88183 /* Support Files */,
-			);
-			path = TweeningUIPageViewController;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				9633D29F99E08A36FB03258D70A1E362 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				63938094D1AFFC3C06E1D48A47CF5825 /* Pods */,
 				1597260BAD45E60431AB94E1639AE060 /* Products */,
 				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9633D29F99E08A36FB03258D70A1E362 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44CE1A5D2739D4D431AADC494CC47BD2 /* TweeningUIPageViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9DF88E010C4E1918F4E59E0A125535C1 /* TweeningUIPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8719AAA66F91EA3B29B409303554FFB5 /* TweeningPageViewController.swift */,
+				FD05B4644BBA266748D7B33A3398F4EA /* UIColor+ColorTweening.swift */,
+			);
+			path = TweeningUIPageViewController;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -134,18 +143,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F29FB82EA9E1739B1D49A5C3C2B88183 /* Support Files */ = {
+		F5E17FF71EE4DD8D86C7D10D5DA6C43F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C5FFA9651F3F76F9D9F0C56B400FCDE /* Info.plist */,
-				EF86051B3FB88A2CDC32A04197F5FFE1 /* TweeningUIPageViewController.modulemap */,
-				2CBC7E541B7D5224114265AAE742D8F4 /* TweeningUIPageViewController.xcconfig */,
-				BA7EBAAE6A572DD49F7D26CD56303821 /* TweeningUIPageViewController-dummy.m */,
-				DE769FAE284941B83B6A46DE0E3D211C /* TweeningUIPageViewController-prefix.pch */,
-				C5D24D74D1CA7F58A49CDEA97813369A /* TweeningUIPageViewController-umbrella.h */,
+				1BC998AE3108E52AF80B8BD509A0DEFB /* Info.plist */,
+				4893C41197A2AFD3CCA7F137CC76E19E /* TweeningUIPageViewController.modulemap */,
+				098B0ED9B535CB8C2EE501A4E33B258A /* TweeningUIPageViewController.xcconfig */,
+				355CCB0C42819012B0475834155CECED /* TweeningUIPageViewController-dummy.m */,
+				CFC0D2F628EAFEE0AADC80F5B0D2E075 /* TweeningUIPageViewController-prefix.pch */,
+				92888B89C82A8F343E07CFC470B1D56D /* TweeningUIPageViewController-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TweeningUIPageViewController";
+			path = "Example/Pods/Target Support Files/TweeningUIPageViewController";
 			sourceTree = "<group>";
 		};
 		FE9811ABEB5931E154211FCA14B78350 /* Pods-Example */ = {
@@ -192,7 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B3D460CDE5CEECFE6E1681782734F91 /* Build configuration list for PBXNativeTarget "TweeningUIPageViewController" */;
 			buildPhases = (
-				54700F7DB95FB18F6586A5715D3FFB65 /* Sources */,
+				017E30B52B0AC61594CB37073E8C931C /* Sources */,
 				D6A55CBC7EEC02886562DDC269E984A1 /* Frameworks */,
 				C62CDED080971E6AE94DAAB04A5662DC /* Headers */,
 			);
@@ -251,13 +260,13 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		54700F7DB95FB18F6586A5715D3FFB65 /* Sources */ = {
+		017E30B52B0AC61594CB37073E8C931C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E94D8AE52795E5CD640AFF1E78062A2E /* TweeningPageViewController.swift in Sources */,
-				0529F4A4082E0AD22DC1BBB5E4FEECD4 /* TweeningUIPageViewController-dummy.m in Sources */,
-				BBBC7B235FFE4B0E86593783B9C883E8 /* UIColor+ColorTweening.swift in Sources */,
+				0CB35A050C9C7CD5D97A68822A414445 /* TweeningPageViewController.swift in Sources */,
+				CF0F99C775689438EA571E71327F83DE /* TweeningUIPageViewController-dummy.m in Sources */,
+				896FF8E0E10A5F1350FF9D2366C503A4 /* UIColor+ColorTweening.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +368,7 @@
 		};
 		A059A200FD06FD5FADEFE05C11D4A884 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CBC7E541B7D5224114265AAE742D8F4 /* TweeningUIPageViewController.xcconfig */;
+			baseConfigurationReference = 098B0ED9B535CB8C2EE501A4E33B258A /* TweeningUIPageViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -426,7 +435,7 @@
 		};
 		BA68D889A2440B71B03B4055D4A71F0E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CBC7E541B7D5224114265AAE742D8F4 /* TweeningUIPageViewController.xcconfig */;
+			baseConfigurationReference = 098B0ED9B535CB8C2EE501A4E33B258A /* TweeningUIPageViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
