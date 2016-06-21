@@ -1,0 +1,21 @@
+{
+  "name": "TweeningUIPageViewController",
+  "version": "1.0.0",
+  "summary": "Extended UIPageViewController with background color tweening",
+  "homepage": "https://github.com/adamszeremeta/TweeningUIPageViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "Adam Szeremeta",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/Rst-It/ios-swift-utils.git",
+    "tag": "1.0.0"
+  },
+  "source_files": "TweeningUIPageViewController/*.swift",
+  "module_name": "TweeningUIPageViewController",
+  "requires_arc": true
+}

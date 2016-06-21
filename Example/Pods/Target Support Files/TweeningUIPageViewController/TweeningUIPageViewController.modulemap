@@ -1,0 +1,6 @@
+framework module TweeningUIPageViewController {
+  umbrella header "TweeningUIPageViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

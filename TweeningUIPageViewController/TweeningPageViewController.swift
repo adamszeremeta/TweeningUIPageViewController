@@ -1,30 +1,30 @@
 //
-//  TweeningUIPageViewController.swift
-//  Example
+//  TweeningPageViewController.swift
+//  TweeningUIPageViewController
 //
 //  Created by Adam Szeremeta on 21.06.2016.
-//  Copyright © 2016 Example. All rights reserved.
+//  Copyright © 2016 Adam Szeremeta. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-@objc protocol TweeningUIPageViewControllerDelegate: class {
+@objc protocol TweeningPageViewControllerDelegate: class {
     
-    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor?
-    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor?
-    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor?
 
-    optional func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) -> Void
+    optional func tweeningPageViewController(tweeningController:TweeningPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) -> Void
 }
 
-class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
+class TweeningPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
     // MARK: Properties
     
     private (set) weak var currentController:UIViewController?
     
-    weak var tweeningDelegate:TweeningUIPageViewControllerDelegate?
+    weak var tweeningDelegate:TweeningPageViewControllerDelegate?
     
     // MARK: Life cycle
     
@@ -33,7 +33,7 @@ class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerD
         
         self.delegate = self
         
-        registerForUIScrollViewDelegate()
+        registerForScrollViewDelegate()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -43,13 +43,13 @@ class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerD
         self.currentController = self.viewControllers?.first
         
         //set initial background color
-        if let startingColor = self.tweeningDelegate?.tweeningUIPageViewController(self, backgroundColorForCurrentController: self.viewControllers?.first) {
+        if let startingColor = self.tweeningDelegate?.tweeningPageViewController(self, backgroundColorForCurrentController: self.viewControllers?.first) {
             
             self.view.backgroundColor = startingColor
         }
     }
     
-    // MARK: UIPageViewControllerDelegate
+    // MARK: PageViewControllerDelegate
     
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
@@ -58,12 +58,12 @@ class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerD
             self.currentController = self.viewControllers?.first
         }
         
-        self.tweeningDelegate?.tweeningUIPageViewController?(self, didFinishAnimating: finished, previousViewControllers: previousViewControllers, transitionCompleted: completed)
+        self.tweeningDelegate?.tweeningPageViewController?(self, didFinishAnimating: finished, previousViewControllers: previousViewControllers, transitionCompleted: completed)
     }
     
-    // MARK: UIScrollViewDelegate
+    // MARK: ScrollViewDelegate
     
-    private func registerForUIScrollViewDelegate() {
+    private func registerForScrollViewDelegate() {
         
         for view in self.view.subviews {
             
@@ -93,8 +93,8 @@ class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerD
         if delta > 0 {
          
             //scrolling forward
-            if let startingColor = self.tweeningDelegate?.tweeningUIPageViewController(self, backgroundColorForCurrentController: self.currentController),
-                let endingColor = self.tweeningDelegate?.tweeningUIPageViewController(self, backgroundColorForControllerAfterController: self.currentController) {
+            if let startingColor = self.tweeningDelegate?.tweeningPageViewController(self, backgroundColorForCurrentController: self.currentController),
+                let endingColor = self.tweeningDelegate?.tweeningPageViewController(self, backgroundColorForControllerAfterController: self.currentController) {
                 
                 let newColor = UIColor.colorTweenBetweenColors(startingColor, endingColor: endingColor, deltaFactor: delta)
                 self.view.backgroundColor = newColor
@@ -103,8 +103,8 @@ class TweeningUIPageViewController : UIPageViewController, UIPageViewControllerD
         } else {
             
             //scrolling backwards
-            if let startingColor = self.tweeningDelegate?.tweeningUIPageViewController(self, backgroundColorForCurrentController: self.currentController),
-                let endingColor = self.tweeningDelegate?.tweeningUIPageViewController(self, backgroundColorForControllerBeforeController: self.currentController) {
+            if let startingColor = self.tweeningDelegate?.tweeningPageViewController(self, backgroundColorForCurrentController: self.currentController),
+                let endingColor = self.tweeningDelegate?.tweeningPageViewController(self, backgroundColorForControllerBeforeController: self.currentController) {
                 
                 let newColor = UIColor.colorTweenBetweenColors(startingColor, endingColor: endingColor, deltaFactor: abs(delta))
                 self.view.backgroundColor = newColor

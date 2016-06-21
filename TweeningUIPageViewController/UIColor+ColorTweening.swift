@@ -1,9 +1,9 @@
 //
 //  UIColor+ColorTweening.swift
-//  Example
+//  TweeningUIPageViewController
 //
 //  Created by Adam Szeremeta on 21.06.2016.
-//  Copyright © 2016 Example. All rights reserved.
+//  Copyright © 2016 Adam Szeremeta. All rights reserved.
 //
 
 import Foundation

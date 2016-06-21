@@ -1,0 +1,16 @@
+PODS:
+  - TweeningUIPageViewController (1.0.0)
+
+DEPENDENCIES:
+  - TweeningUIPageViewController (from `../`)
+
+EXTERNAL SOURCES:
+  TweeningUIPageViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TweeningUIPageViewController: d1447b46f4697db763dfd874ef7451e270d107e5
+
+PODFILE CHECKSUM: c1a24b25953639e3e9b5192107a19af0579163f8
+
+COCOAPODS: 1.0.0
