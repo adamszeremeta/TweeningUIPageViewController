@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPageViewControllerDataSource {
+class ViewController: UIViewController, UIPageViewControllerDataSource, TweeningUIPageViewControllerDelegate {
 
     let backgroundColors = [
         
@@ -38,6 +38,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         self.pageViewController = TweeningUIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         self.pageViewController.dataSource = self
+        self.pageViewController.tweeningDelegate = self
         
         self.pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(self.pageViewController.view, atIndex: 0)
@@ -68,6 +69,46 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         return self.getControllerForIndex(0)
     }
+    
+    // MARK: TweeningUIPageViewControllerDelegate
+    
+    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor? {
+        
+        if let pageController = viewController as? PageViewController {
+            
+            let previousIndex = pageController.controllerIndex - 1
+            if previousIndex >= 0 && previousIndex < self.backgroundColors.count {
+                
+                return self.backgroundColors[previousIndex]
+            }
+        }
+        
+        return nil
+    }
+    
+    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor? {
+        
+        if let pageController = viewController as? PageViewController {
+            
+            return self.backgroundColors[pageController.controllerIndex]
+        }
+        
+        return nil
+    }
+    
+    func tweeningUIPageViewController(tweeningController:TweeningUIPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor? {
+        
+        if let pageController = viewController as? PageViewController {
+            
+            let nextIndex = pageController.controllerIndex + 1
+            if nextIndex >= 0 && nextIndex < self.backgroundColors.count {
+                
+                return self.backgroundColors[nextIndex]
+            }
+        }
+        
+        return nil
+    }
 
     // MARK: Helpers
     
@@ -78,7 +119,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
             return nil
         }
         
-        let controller = PageViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: ViewController.self))
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("PageViewController") as! PageViewController
         controller.controllerIndex = index
         
         return controller

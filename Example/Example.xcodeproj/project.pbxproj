@@ -14,6 +14,7 @@
 		E00FE1521D19CF0700F74ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00FE1501D19CF0700F74ADA /* LaunchScreen.storyboard */; };
 		E00FE15A1D19CF5400F74ADA /* TweeningUIPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00FE1591D19CF5400F74ADA /* TweeningUIPageViewController.swift */; };
 		E00FE15C1D19D4E400F74ADA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00FE15B1D19D4E400F74ADA /* PageViewController.swift */; };
+		E00FE15E1D19D71E00F74ADA /* UIColor+ColorTweening.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00FE15D1D19D71E00F74ADA /* UIColor+ColorTweening.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E00FE1531D19CF0700F74ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00FE1591D19CF5400F74ADA /* TweeningUIPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeningUIPageViewController.swift; sourceTree = "<group>"; };
 		E00FE15B1D19D4E400F74ADA /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		E00FE15D1D19D71E00F74ADA /* UIColor+ColorTweening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorTweening.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E00FE1501D19CF0700F74ADA /* LaunchScreen.storyboard */,
 				E00FE1531D19CF0700F74ADA /* Info.plist */,
 				E00FE1591D19CF5400F74ADA /* TweeningUIPageViewController.swift */,
+				E00FE15D1D19D71E00F74ADA /* UIColor+ColorTweening.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				E00FE15A1D19CF5400F74ADA /* TweeningUIPageViewController.swift in Sources */,
 				E00FE1481D19CF0700F74ADA /* AppDelegate.swift in Sources */,
 				E00FE15C1D19D4E400F74ADA /* PageViewController.swift in Sources */,
+				E00FE15E1D19D71E00F74ADA /* UIColor+ColorTweening.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

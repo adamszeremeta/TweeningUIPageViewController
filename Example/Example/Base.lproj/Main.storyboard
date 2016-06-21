@@ -22,5 +22,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="uWW-UH-nZA">
+            <objects>
+                <viewController storyboardIdentifier="PageViewController" id="jnj-vV-fmx" customClass="PageViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V9e-YX-vk1"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYd-pW-dzd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yGk-Lp-ykq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ws-hz-7Bf">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="B50-EY-YP4"/>
+                                    <constraint firstAttribute="height" constant="100" id="SAm-gZ-QlZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ws-hz-7Bf" firstAttribute="centerX" secondItem="yGk-Lp-ykq" secondAttribute="centerX" id="5yv-di-oSD"/>
+                            <constraint firstItem="1ws-hz-7Bf" firstAttribute="centerY" secondItem="yGk-Lp-ykq" secondAttribute="centerY" id="fTu-jL-jGy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indexLabel" destination="1ws-hz-7Bf" id="X1i-eT-Pc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbd-g5-kJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="421"/>
+        </scene>
     </scenes>
 </document>
