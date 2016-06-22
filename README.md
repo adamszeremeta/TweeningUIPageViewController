@@ -11,7 +11,7 @@ Table of contents
 * [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Licence](#licence)
+* [License](#license)
 
 Features
 ========
