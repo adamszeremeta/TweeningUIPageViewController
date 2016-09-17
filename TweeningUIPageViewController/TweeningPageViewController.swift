@@ -11,24 +11,24 @@ import UIKit
 
 @objc public protocol TweeningPageViewControllerDelegate: class {
     
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor?
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor?
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor?
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor?
 
-    optional func tweeningPageViewController(tweeningController:TweeningPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) -> Void
+    @objc optional func tweeningPageViewController(_ tweeningController:TweeningPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) -> Void
 }
 
-public class TweeningPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
+open class TweeningPageViewController : UIPageViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
     // MARK: Properties
     
-    private (set) weak var currentController:UIViewController?
+    fileprivate (set) weak var currentController:UIViewController?
     
-    public weak var tweeningDelegate:TweeningPageViewControllerDelegate?
+    open weak var tweeningDelegate:TweeningPageViewControllerDelegate?
     
     // MARK: Life cycle
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
@@ -36,7 +36,7 @@ public class TweeningPageViewController : UIPageViewController, UIPageViewContro
         registerForScrollViewDelegate()
     }
     
-    override public func viewWillAppear(animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //set current controller
@@ -51,7 +51,7 @@ public class TweeningPageViewController : UIPageViewController, UIPageViewContro
     
     // MARK: PageViewControllerDelegate
     
-    public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    open func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if completed {
             
@@ -63,7 +63,7 @@ public class TweeningPageViewController : UIPageViewController, UIPageViewContro
     
     // MARK: ScrollViewDelegate
     
-    private func registerForScrollViewDelegate() {
+    fileprivate func registerForScrollViewDelegate() {
         
         for view in self.view.subviews {
             
@@ -74,7 +74,7 @@ public class TweeningPageViewController : UIPageViewController, UIPageViewContro
         }
     }
     
-    public func scrollViewDidScroll(scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         //color tweening
         self.handleScrollOffsetForColorTweening(scrollView.contentOffset.x)
@@ -82,7 +82,7 @@ public class TweeningPageViewController : UIPageViewController, UIPageViewContro
     
     // MARK: Color tweening
 
-    private func handleScrollOffsetForColorTweening(scrollOffset:CGFloat) {
+    fileprivate func handleScrollOffsetForColorTweening(_ scrollOffset:CGFloat) {
         
         //delta factor
         let startingOffset = self.view.frame.size.width

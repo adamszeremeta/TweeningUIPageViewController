@@ -14,7 +14,7 @@ extension UIColor {
     /**
      * Create new color mixed from starting and ending color and delta factor
      */
-    class func colorTweenBetweenColors(startingColor:UIColor, endingColor:UIColor, deltaFactor:CGFloat) -> UIColor {
+    class func colorTweenBetweenColors(_ startingColor:UIColor, endingColor:UIColor, deltaFactor:CGFloat) -> UIColor {
         
         var redStartingColor:CGFloat = 0
         var greenStartingColor:CGFloat = 0

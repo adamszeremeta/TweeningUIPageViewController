@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'TweeningUIPageViewController'
-  s.version      = '1.0.0'
+  s.version      = '2.0.0'
   s.summary      = 'Extended UIPageViewController with background color tweening'
 
   s.homepage     = 'https://github.com/adamszeremeta/TweeningUIPageViewController'

@@ -13,13 +13,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
 
     let backgroundColors = [
         
-        UIColor.redColor(),
-        UIColor.blueColor(),
-        UIColor.greenColor(),
-        UIColor.orangeColor()
+        UIColor.red,
+        UIColor.blue,
+        UIColor.green,
+        UIColor.orange
     ]
     
-    private var pageViewController:TweeningPageViewController!
+    fileprivate var pageViewController:TweeningPageViewController!
     
     // MARK: Life cycle
     
@@ -30,28 +30,28 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         
         //add first controller to pager
         let firstController = self.getControllerForIndex(0)
-        self.pageViewController.setViewControllers([firstController!], direction: .Forward, animated: false, completion: nil)
+        self.pageViewController.setViewControllers([firstController!], direction: .forward, animated: false, completion: nil)
     }
 
     // MARK: UIPageViewController
 
-    private func addUIPageViewControllerToViewHierarchy() {
+    fileprivate func addUIPageViewControllerToViewHierarchy() {
         
-        self.pageViewController = TweeningPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        self.pageViewController = TweeningPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController.dataSource = self
         self.pageViewController.tweeningDelegate = self
         
         self.pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.view.insertSubview(self.pageViewController.view, atIndex: 0)
+        self.view.insertSubview(self.pageViewController.view, at: 0)
         
-        let views = ["subview": self.pageViewController.view]
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(0)-[subview]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[subview]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        let views:[String: UIView] = ["subview": self.pageViewController.view]
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[subview]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[subview]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
     }
     
     // MARK: UIPageViewControllerDataSource
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         if let controller = viewController as? PageViewController {
             
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         return self.getControllerForIndex(0)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         if let controller = viewController as? PageViewController {
             
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
     
     // MARK: TweeningUIPageViewControllerDelegate
     
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForControllerBeforeController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         return nil
     }
     
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForCurrentController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             
@@ -97,7 +97,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
         return nil
     }
     
-    func tweeningPageViewController(tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor? {
+    func tweeningPageViewController(_ tweeningController:TweeningPageViewController, backgroundColorForControllerAfterController viewController:UIViewController?) -> UIColor? {
         
         if let pageController = viewController as? PageViewController {
             
@@ -113,16 +113,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, Tweening
 
     // MARK: Helpers
     
-    private func getControllerForIndex(index:Int) -> PageViewController? {
+    fileprivate func getControllerForIndex(_ index:Int) -> PageViewController? {
         
         if index < 0 || index >= self.backgroundColors.count {
             
             return nil
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: ViewController.self))
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self))
         
-        let controller = storyboard.instantiateViewControllerWithIdentifier("PageViewController") as! PageViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
         controller.controllerIndex = index
         
         return controller
